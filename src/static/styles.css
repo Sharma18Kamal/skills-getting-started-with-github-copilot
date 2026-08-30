@@ -57,6 +57,24 @@ section h3 {
   color: #1a237e;
 }
 
+#search-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+#search-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#search-form button {
+  padding: 10px 15px;
+}
+
 .activity-card {
   margin-bottom: 15px;
   padding: 15px;
@@ -95,22 +113,42 @@ section h3 {
 }
 
 .participants-list li {
-  position: relative;
-  padding: 4px 0 4px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 0;
   font-size: 14px;
   color: #444;
 }
 
-.participants-list li::before {
-  content: "\2713";
-  position: absolute;
-  left: 0;
-  color: #0066cc;
-  font-weight: bold;
-}
-
 .participants-list li:not(:last-child) {
   border-bottom: 1px solid #eee;
+}
+
+.participant-email {
+  overflow-wrap: anywhere;
+}
+
+.delete-participant {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #c62828;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.delete-participant:hover {
+  background-color: #ffebee;
+  color: #b71c1c;
 }
 
 .no-participants {

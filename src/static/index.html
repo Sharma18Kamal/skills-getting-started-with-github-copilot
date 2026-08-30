@@ -15,6 +15,15 @@
     <main>
       <section id="activities-container">
         <h3>Available Activities</h3>
+        <form id="search-form" role="search">
+          <input
+            type="search"
+            id="activity-search"
+            placeholder="Search activities by name or description..."
+            aria-label="Search activities"
+          />
+          <button type="submit">Search</button>
+        </form>
         <div id="activities-list">
           <!-- Activities will be loaded here -->
           <p>Loading activities...</p>
